@@ -1,5 +1,4 @@
 # RealmExplorer
-## Info
 Example **iOS Objective-C Project** to explore basic data manipulation in conjunction with a [Realm](https://github.com/realm/realm-cocoa) database and [FXForms](https://github.com/nicklockwood/FXForms).
 
 ## Features
@@ -22,7 +21,7 @@ Please download the **Realm.framework** for Objective-C from the website at [htt
 To better get to know the possibilities of [FXForms](https://github.com/nicklockwood/FXForms) please visit the github repo of *Nick Lockwood*. Huge thank you to him for providing this solution. It was perfect to tinkering with this sample. Any help & hints how to get Realm-entities better integrated with the FXForms are welcome.
 
 ## Screenshot
-![image](http://www.noxymo.com/filespublic/realmexplorer.gif)
+![image](https://raw.githubusercontent.com/trailblazr/RealmExplorer/master/realmexplorer.gif)
 
 ## Versions
 
