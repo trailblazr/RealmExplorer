@@ -1,0 +1,42 @@
+//
+//  RealmExplorer_Prefix.pch
+//  RealmExplorer
+//
+//  Created by Lincoln Six Echo on 02.11.15.
+//  Copyright © 2015 appdoctors UG. All rights reserved.
+//
+
+#ifndef RealmExplorer_Prefix_pch
+#define RealmExplorer_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import <Realm/Realm.h>
+
+#endif /* RealmExplorer_Prefix_pch */
+
+#define kUSE_FX_FORMS                         1 // USE '1' TO RUN ON FX-FORMS
+
+#define kDB_USERDEFAULTS_ENCRYPTION_KEY       @"enc_key_realm"
+#define kDB_FILENAME_VERSION_PREFIX           @"Database_"
+#define kDB_FILENAME_VERSION_SUFFIX           @"_"
+#define kDB_FILENAME_PLAIN                    @"Plain.realm"
+#define kDB_FILENAME_CRYPT                    @"Secure.realm"
+
+#define kDB_SCHEMA_VERSION                     0 // <-- CHANGE THIS STARTING AT 0 UP TO 4
+#define kDB_SCHEMA_ENCRYPTED                   0 // USE '1' FOR ENCRYPTION ON
+#define kDB_SCHEMA_VERSION_UNDEFINED          -1 // DO NOT CHANGE THIS!!!
+
+#define kDB_IS_SCHEMA_0                       (kDB_SCHEMA_VERSION == 0)
+#define kDB_IS_SCHEMA_1                       (kDB_SCHEMA_VERSION == 1)
+#define kDB_IS_SCHEMA_2                       (kDB_SCHEMA_VERSION == 2)
+#define kDB_IS_SCHEMA_3                       (kDB_SCHEMA_VERSION == 3)
+#define kDB_IS_SCHEMA_4                       (kDB_SCHEMA_VERSION == 4)
+#define kDB_IS_MIN_SCHEMA_0                   (kDB_SCHEMA_VERSION >= 0)
+#define kDB_IS_MIN_SCHEMA_1                   (kDB_SCHEMA_VERSION >= 1)
+#define kDB_IS_MIN_SCHEMA_2                   (kDB_SCHEMA_VERSION >= 2)
+#define kDB_IS_MIN_SCHEMA_3                   (kDB_SCHEMA_VERSION >= 3)
+#define kDB_IS_MIN_SCHEMA_4                   (kDB_SCHEMA_VERSION >= 4)
+
+
+#define USER_DOCUMENT_FOLDER [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"]

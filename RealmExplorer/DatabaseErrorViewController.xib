@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DatabaseErrorViewController">
+            <connections>
+                <outlet property="exceptionLabel" destination="nv3-sx-d10" id="9sR-g5-g6Y"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ERROR" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIE-Pe-OGZ">
+                    <rect key="frame" x="0.0" y="64" width="600" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="YMp-5o-0FX"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nv3-sx-d10">
+                    <rect key="frame" x="0.0" y="294" width="600" height="306"/>
+                    <string key="text">A fatal error occurred! 
+Please contact the developer.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="warning" translatesAutoresizingMaskIntoConstraints="NO" id="q5m-C7-eBY">
+                    <rect key="frame" x="268" y="222" width="64" height="64"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="64" id="GqE-nG-uOP"/>
+                        <constraint firstAttribute="height" constant="64" id="dVq-UT-iRb"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="0.050980392159999999" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="qIE-Pe-OGZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="3pC-iD-3NO"/>
+                <constraint firstItem="q5m-C7-eBY" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="FSr-nx-yXd"/>
+                <constraint firstAttribute="bottom" secondItem="nv3-sx-d10" secondAttribute="bottom" id="JWb-fX-gxH"/>
+                <constraint firstItem="nv3-sx-d10" firstAttribute="top" secondItem="qIE-Pe-OGZ" secondAttribute="bottom" constant="8" id="Jho-24-eL3"/>
+                <constraint firstAttribute="trailing" secondItem="nv3-sx-d10" secondAttribute="trailing" id="OSG-ou-pbc"/>
+                <constraint firstItem="qIE-Pe-OGZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="PIZ-jh-tQY"/>
+                <constraint firstItem="q5m-C7-eBY" firstAttribute="top" secondItem="qIE-Pe-OGZ" secondAttribute="bottom" constant="8" id="PKB-8c-aux"/>
+                <constraint firstItem="nv3-sx-d10" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="aeX-lN-Uqb"/>
+                <constraint firstAttribute="trailing" secondItem="qIE-Pe-OGZ" secondAttribute="trailing" id="atV-7v-uqR"/>
+                <constraint firstAttribute="bottom" secondItem="nv3-sx-d10" secondAttribute="bottom" id="bL5-Iu-J2i"/>
+                <constraint firstItem="nv3-sx-d10" firstAttribute="top" secondItem="q5m-C7-eBY" secondAttribute="bottom" constant="8" id="fBm-N2-3xc"/>
+                <constraint firstAttribute="trailing" secondItem="nv3-sx-d10" secondAttribute="trailing" id="flN-PT-VAg"/>
+                <constraint firstItem="nv3-sx-d10" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="oKG-qJ-wDE"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="JWb-fX-gxH"/>
+                    <exclude reference="Jho-24-eL3"/>
+                    <exclude reference="aeX-lN-Uqb"/>
+                    <exclude reference="flN-PT-VAg"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+    <resources>
+        <image name="warning" width="64" height="64"/>
+    </resources>
+</document>

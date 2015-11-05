@@ -1,0 +1,457 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8FA2693C1BE977DA00E63724 /* YachtFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA2693B1BE977DA00E63724 /* YachtFormViewController.m */; };
+		8FA2693F1BE978AF00E63724 /* YachtForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA2693E1BE978AF00E63724 /* YachtForm.m */; };
+		8FA269431BE97A4800E63724 /* YachtFormPartBasics.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA269421BE97A4800E63724 /* YachtFormPartBasics.m */; };
+		8FA269461BE97A5A00E63724 /* YachtFormPartFeatures.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA269451BE97A5A00E63724 /* YachtFormPartFeatures.m */; };
+		8FA2694A1BE991AA00E63724 /* CustomButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA269481BE991AA00E63724 /* CustomButtonCell.m */; };
+		8FA2694B1BE991AA00E63724 /* CustomButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FA269491BE991AA00E63724 /* CustomButtonCell.xib */; };
+		8FA2694F1BEA02CC00E63724 /* DatabaseErrorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA2694D1BEA02CC00E63724 /* DatabaseErrorViewController.m */; };
+		8FA269501BEA02CC00E63724 /* DatabaseErrorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FA2694E1BEA02CC00E63724 /* DatabaseErrorViewController.xib */; };
+		8FA269551BEA243200E63724 /* DatabaseFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA269541BEA243200E63724 /* DatabaseFactory.m */; };
+		8FA2695A1BEA334300E63724 /* CaptainForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA269591BEA334300E63724 /* CaptainForm.m */; };
+		8FA2695D1BEA33D900E63724 /* CaptainFormPartBasics.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA2695C1BEA33D900E63724 /* CaptainFormPartBasics.m */; };
+		8FA269601BEA36C900E63724 /* CaptainFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA2695F1BEA36C900E63724 /* CaptainFormViewController.m */; };
+		8FA269631BEA872300E63724 /* CaptainFormPartsRealm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA269621BEA872300E63724 /* CaptainFormPartsRealm.m */; };
+		8FD3A1471BE7B165006F071D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD3A1461BE7B165006F071D /* main.m */; };
+		8FD3A14A1BE7B165006F071D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD3A1491BE7B165006F071D /* AppDelegate.m */; };
+		8FD3A14D1BE7B165006F071D /* CaptainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD3A14C1BE7B165006F071D /* CaptainViewController.m */; };
+		8FD3A1521BE7B165006F071D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FD3A1511BE7B165006F071D /* Assets.xcassets */; };
+		8FD3A15D1BE7B208006F071D /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FD3A15C1BE7B208006F071D /* Launch Screen.xib */; };
+		8FD3A15F1BE7B2EB006F071D /* CaptainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FD3A15E1BE7B2EB006F071D /* CaptainViewController.xib */; };
+		8FD3A1631BE7B469006F071D /* FXForms.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD3A1621BE7B469006F071D /* FXForms.m */; };
+		8FD3A1661BE7B80A006F071D /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD3A1651BE7B80A006F071D /* Realm.framework */; };
+		8FD3A1681BE7B829006F071D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD3A1671BE7B829006F071D /* Security.framework */; };
+		8FD3A16A1BE7BD1B006F071D /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD3A1691BE7BD1B006F071D /* NotificationCenter.framework */; };
+		8FD3A16C1BE7BD22006F071D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD3A16B1BE7BD22006F071D /* UIKit.framework */; };
+		8FD3A16E1BE7BD3C006F071D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD3A16D1BE7BD3C006F071D /* Foundation.framework */; };
+		8FD3A1701BE7BD41006F071D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD3A16F1BE7BD41006F071D /* CoreGraphics.framework */; };
+		8FD3A1721BE7BE3E006F071D /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD3A1711BE7BE3E006F071D /* libc++.tbd */; };
+		8FD3A1761BE7CAE8006F071D /* DatabaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD3A1751BE7CAE8006F071D /* DatabaseModel.m */; };
+		8FD3A17C1BE920FA006F071D /* Icon_60.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FD3A1791BE920FA006F071D /* Icon_60.png */; };
+		8FD3A18C1BE931BC006F071D /* Icon_1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FD3A18B1BE931BC006F071D /* Icon_1024.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8FA2693A1BE977DA00E63724 /* YachtFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YachtFormViewController.h; sourceTree = "<group>"; };
+		8FA2693B1BE977DA00E63724 /* YachtFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YachtFormViewController.m; sourceTree = "<group>"; };
+		8FA2693D1BE978AF00E63724 /* YachtForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YachtForm.h; sourceTree = "<group>"; };
+		8FA2693E1BE978AF00E63724 /* YachtForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YachtForm.m; sourceTree = "<group>"; };
+		8FA269411BE97A4800E63724 /* YachtFormPartBasics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YachtFormPartBasics.h; sourceTree = "<group>"; };
+		8FA269421BE97A4800E63724 /* YachtFormPartBasics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YachtFormPartBasics.m; sourceTree = "<group>"; };
+		8FA269441BE97A5A00E63724 /* YachtFormPartFeatures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YachtFormPartFeatures.h; sourceTree = "<group>"; };
+		8FA269451BE97A5A00E63724 /* YachtFormPartFeatures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YachtFormPartFeatures.m; sourceTree = "<group>"; };
+		8FA269471BE991AA00E63724 /* CustomButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButtonCell.h; sourceTree = "<group>"; };
+		8FA269481BE991AA00E63724 /* CustomButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButtonCell.m; sourceTree = "<group>"; };
+		8FA269491BE991AA00E63724 /* CustomButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomButtonCell.xib; sourceTree = "<group>"; };
+		8FA2694C1BEA02CC00E63724 /* DatabaseErrorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseErrorViewController.h; sourceTree = "<group>"; };
+		8FA2694D1BEA02CC00E63724 /* DatabaseErrorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseErrorViewController.m; sourceTree = "<group>"; };
+		8FA2694E1BEA02CC00E63724 /* DatabaseErrorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatabaseErrorViewController.xib; sourceTree = "<group>"; };
+		8FA269531BEA243200E63724 /* DatabaseFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseFactory.h; sourceTree = "<group>"; };
+		8FA269541BEA243200E63724 /* DatabaseFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseFactory.m; sourceTree = "<group>"; };
+		8FA269581BEA334300E63724 /* CaptainForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptainForm.h; sourceTree = "<group>"; };
+		8FA269591BEA334300E63724 /* CaptainForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptainForm.m; sourceTree = "<group>"; };
+		8FA2695B1BEA33D900E63724 /* CaptainFormPartBasics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptainFormPartBasics.h; sourceTree = "<group>"; };
+		8FA2695C1BEA33D900E63724 /* CaptainFormPartBasics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptainFormPartBasics.m; sourceTree = "<group>"; };
+		8FA2695E1BEA36C900E63724 /* CaptainFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptainFormViewController.h; sourceTree = "<group>"; };
+		8FA2695F1BEA36C900E63724 /* CaptainFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptainFormViewController.m; sourceTree = "<group>"; };
+		8FA269611BEA872300E63724 /* CaptainFormPartsRealm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptainFormPartsRealm.h; sourceTree = "<group>"; };
+		8FA269621BEA872300E63724 /* CaptainFormPartsRealm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptainFormPartsRealm.m; sourceTree = "<group>"; };
+		8FD3A1421BE7B165006F071D /* RealmExplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmExplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FD3A1461BE7B165006F071D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = RealmExplorer/main.m; sourceTree = "<group>"; };
+		8FD3A1481BE7B165006F071D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = RealmExplorer/AppDelegate.h; sourceTree = "<group>"; };
+		8FD3A1491BE7B165006F071D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = RealmExplorer/AppDelegate.m; sourceTree = "<group>"; };
+		8FD3A14B1BE7B165006F071D /* CaptainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CaptainViewController.h; sourceTree = "<group>"; };
+		8FD3A14C1BE7B165006F071D /* CaptainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CaptainViewController.m; sourceTree = "<group>"; };
+		8FD3A1511BE7B165006F071D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8FD3A1561BE7B165006F071D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = RealmExplorer/Info.plist; sourceTree = "<group>"; };
+		8FD3A15C1BE7B208006F071D /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
+		8FD3A15E1BE7B2EB006F071D /* CaptainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CaptainViewController.xib; sourceTree = "<group>"; };
+		8FD3A1611BE7B469006F071D /* FXForms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXForms.h; sourceTree = "<group>"; };
+		8FD3A1621BE7B469006F071D /* FXForms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXForms.m; sourceTree = "<group>"; };
+		8FD3A1641BE7B742006F071D /* RealmExplorer_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RealmExplorer_Prefix.pch; sourceTree = "<group>"; };
+		8FD3A1651BE7B80A006F071D /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = ../Realm/Realm.framework; sourceTree = "<group>"; };
+		8FD3A1671BE7B829006F071D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		8FD3A1691BE7BD1B006F071D /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		8FD3A16B1BE7BD22006F071D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8FD3A16D1BE7BD3C006F071D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8FD3A16F1BE7BD41006F071D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8FD3A1711BE7BE3E006F071D /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		8FD3A1731BE7C73F006F071D /* DatabaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DatabaseModel.h; sourceTree = "<group>"; };
+		8FD3A1751BE7CAE8006F071D /* DatabaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseModel.m; sourceTree = "<group>"; };
+		8FD3A1791BE920FA006F071D /* Icon_60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_60.png; sourceTree = SOURCE_ROOT; };
+		8FD3A18B1BE931BC006F071D /* Icon_1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_1024.png; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8FD3A13F1BE7B165006F071D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FD3A1721BE7BE3E006F071D /* libc++.tbd in Frameworks */,
+				8FD3A1701BE7BD41006F071D /* CoreGraphics.framework in Frameworks */,
+				8FD3A16E1BE7BD3C006F071D /* Foundation.framework in Frameworks */,
+				8FD3A16C1BE7BD22006F071D /* UIKit.framework in Frameworks */,
+				8FD3A16A1BE7BD1B006F071D /* NotificationCenter.framework in Frameworks */,
+				8FD3A1681BE7B829006F071D /* Security.framework in Frameworks */,
+				8FD3A1661BE7B80A006F071D /* Realm.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8FA269401BE97A3000E63724 /* Forms */ = {
+			isa = PBXGroup;
+			children = (
+				8FA269411BE97A4800E63724 /* YachtFormPartBasics.h */,
+				8FA269421BE97A4800E63724 /* YachtFormPartBasics.m */,
+				8FA269441BE97A5A00E63724 /* YachtFormPartFeatures.h */,
+				8FA269451BE97A5A00E63724 /* YachtFormPartFeatures.m */,
+				8FA2693D1BE978AF00E63724 /* YachtForm.h */,
+				8FA2693E1BE978AF00E63724 /* YachtForm.m */,
+				8FA2695B1BEA33D900E63724 /* CaptainFormPartBasics.h */,
+				8FA2695C1BEA33D900E63724 /* CaptainFormPartBasics.m */,
+				8FA269611BEA872300E63724 /* CaptainFormPartsRealm.h */,
+				8FA269621BEA872300E63724 /* CaptainFormPartsRealm.m */,
+				8FA269581BEA334300E63724 /* CaptainForm.h */,
+				8FA269591BEA334300E63724 /* CaptainForm.m */,
+			);
+			name = Forms;
+			sourceTree = "<group>";
+		};
+		8FA269511BEA0AD700E63724 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8FA269531BEA243200E63724 /* DatabaseFactory.h */,
+				8FA269541BEA243200E63724 /* DatabaseFactory.m */,
+				8FD3A1731BE7C73F006F071D /* DatabaseModel.h */,
+				8FD3A1751BE7CAE8006F071D /* DatabaseModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8FA269521BEA0AEB00E63724 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8FA2693A1BE977DA00E63724 /* YachtFormViewController.h */,
+				8FA2693B1BE977DA00E63724 /* YachtFormViewController.m */,
+				8FA2695E1BEA36C900E63724 /* CaptainFormViewController.h */,
+				8FA2695F1BEA36C900E63724 /* CaptainFormViewController.m */,
+				8FD3A14B1BE7B165006F071D /* CaptainViewController.h */,
+				8FD3A14C1BE7B165006F071D /* CaptainViewController.m */,
+				8FD3A15E1BE7B2EB006F071D /* CaptainViewController.xib */,
+				8FA2694C1BEA02CC00E63724 /* DatabaseErrorViewController.h */,
+				8FA2694D1BEA02CC00E63724 /* DatabaseErrorViewController.m */,
+				8FA2694E1BEA02CC00E63724 /* DatabaseErrorViewController.xib */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		8FD3A1391BE7B165006F071D = {
+			isa = PBXGroup;
+			children = (
+				8FD3A1641BE7B742006F071D /* RealmExplorer_Prefix.pch */,
+				8FD3A1461BE7B165006F071D /* main.m */,
+				8FD3A1481BE7B165006F071D /* AppDelegate.h */,
+				8FD3A1491BE7B165006F071D /* AppDelegate.m */,
+				8FD3A1561BE7B165006F071D /* Info.plist */,
+				8FD3A1441BE7B165006F071D /* RealmExplorer */,
+				8FD3A1431BE7B165006F071D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8FD3A1431BE7B165006F071D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8FD3A1421BE7B165006F071D /* RealmExplorer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8FD3A1441BE7B165006F071D /* RealmExplorer */ = {
+			isa = PBXGroup;
+			children = (
+				8FD3A1601BE7B469006F071D /* FXForms */,
+				8FA269511BEA0AD700E63724 /* Model */,
+				8FA269401BE97A3000E63724 /* Forms */,
+				8FA269521BEA0AEB00E63724 /* Controller */,
+				8FD3A1511BE7B165006F071D /* Assets.xcassets */,
+				8FD3A1451BE7B165006F071D /* Supporting Files */,
+			);
+			path = RealmExplorer;
+			sourceTree = "<group>";
+		};
+		8FD3A1451BE7B165006F071D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8FD3A18B1BE931BC006F071D /* Icon_1024.png */,
+				8FD3A1791BE920FA006F071D /* Icon_60.png */,
+				8FD3A1711BE7BE3E006F071D /* libc++.tbd */,
+				8FD3A16B1BE7BD22006F071D /* UIKit.framework */,
+				8FD3A1691BE7BD1B006F071D /* NotificationCenter.framework */,
+				8FD3A1651BE7B80A006F071D /* Realm.framework */,
+				8FD3A1671BE7B829006F071D /* Security.framework */,
+				8FD3A16F1BE7BD41006F071D /* CoreGraphics.framework */,
+				8FD3A16D1BE7BD3C006F071D /* Foundation.framework */,
+				8FD3A15C1BE7B208006F071D /* Launch Screen.xib */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8FD3A1601BE7B469006F071D /* FXForms */ = {
+			isa = PBXGroup;
+			children = (
+				8FD3A1611BE7B469006F071D /* FXForms.h */,
+				8FD3A1621BE7B469006F071D /* FXForms.m */,
+				8FA269471BE991AA00E63724 /* CustomButtonCell.h */,
+				8FA269481BE991AA00E63724 /* CustomButtonCell.m */,
+				8FA269491BE991AA00E63724 /* CustomButtonCell.xib */,
+			);
+			path = FXForms;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8FD3A1411BE7B165006F071D /* RealmExplorer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FD3A1591BE7B165006F071D /* Build configuration list for PBXNativeTarget "RealmExplorer" */;
+			buildPhases = (
+				8FD3A13E1BE7B165006F071D /* Sources */,
+				8FD3A13F1BE7B165006F071D /* Frameworks */,
+				8FD3A1401BE7B165006F071D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RealmExplorer;
+			productName = RealmExplorer;
+			productReference = 8FD3A1421BE7B165006F071D /* RealmExplorer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8FD3A13A1BE7B165006F071D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "appdoctors UG";
+				TargetAttributes = {
+					8FD3A1411BE7B165006F071D = {
+						CreatedOnToolsVersion = 7.1;
+					};
+				};
+			};
+			buildConfigurationList = 8FD3A13D1BE7B165006F071D /* Build configuration list for PBXProject "RealmExplorer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8FD3A1391BE7B165006F071D;
+			productRefGroup = 8FD3A1431BE7B165006F071D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8FD3A1411BE7B165006F071D /* RealmExplorer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8FD3A1401BE7B165006F071D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FD3A17C1BE920FA006F071D /* Icon_60.png in Resources */,
+				8FD3A1521BE7B165006F071D /* Assets.xcassets in Resources */,
+				8FA269501BEA02CC00E63724 /* DatabaseErrorViewController.xib in Resources */,
+				8FA2694B1BE991AA00E63724 /* CustomButtonCell.xib in Resources */,
+				8FD3A15F1BE7B2EB006F071D /* CaptainViewController.xib in Resources */,
+				8FD3A15D1BE7B208006F071D /* Launch Screen.xib in Resources */,
+				8FD3A18C1BE931BC006F071D /* Icon_1024.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8FD3A13E1BE7B165006F071D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FA269461BE97A5A00E63724 /* YachtFormPartFeatures.m in Sources */,
+				8FA269631BEA872300E63724 /* CaptainFormPartsRealm.m in Sources */,
+				8FD3A14D1BE7B165006F071D /* CaptainViewController.m in Sources */,
+				8FA2695D1BEA33D900E63724 /* CaptainFormPartBasics.m in Sources */,
+				8FA269601BEA36C900E63724 /* CaptainFormViewController.m in Sources */,
+				8FA2695A1BEA334300E63724 /* CaptainForm.m in Sources */,
+				8FA269431BE97A4800E63724 /* YachtFormPartBasics.m in Sources */,
+				8FD3A1761BE7CAE8006F071D /* DatabaseModel.m in Sources */,
+				8FA2694A1BE991AA00E63724 /* CustomButtonCell.m in Sources */,
+				8FA269551BEA243200E63724 /* DatabaseFactory.m in Sources */,
+				8FA2694F1BEA02CC00E63724 /* DatabaseErrorViewController.m in Sources */,
+				8FA2693C1BE977DA00E63724 /* YachtFormViewController.m in Sources */,
+				8FD3A1631BE7B469006F071D /* FXForms.m in Sources */,
+				8FA2693F1BE978AF00E63724 /* YachtForm.m in Sources */,
+				8FD3A14A1BE7B165006F071D /* AppDelegate.m in Sources */,
+				8FD3A1471BE7B165006F071D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		8FD3A1571BE7B165006F071D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8FD3A1581BE7B165006F071D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8FD3A15A1BE7B165006F071D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Realm",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = RealmExplorer_Prefix.pch;
+				INFOPLIST_FILE = RealmExplorer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.appdoctors.realmexplorer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8FD3A15B1BE7B165006F071D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Realm",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = RealmExplorer_Prefix.pch;
+				INFOPLIST_FILE = RealmExplorer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.appdoctors.realmexplorer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8FD3A13D1BE7B165006F071D /* Build configuration list for PBXProject "RealmExplorer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FD3A1571BE7B165006F071D /* Debug */,
+				8FD3A1581BE7B165006F071D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8FD3A1591BE7B165006F071D /* Build configuration list for PBXNativeTarget "RealmExplorer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FD3A15A1BE7B165006F071D /* Debug */,
+				8FD3A15B1BE7B165006F071D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8FD3A13A1BE7B165006F071D /* Project object */;
+}
