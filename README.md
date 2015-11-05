@@ -1,11 +1,11 @@
 # RealmExplorer
-Example **iOS Objective-C Project** to explore basic data manipulation in conjunction with a [Realm](https://github.com/realm/realm-cocoa) database and [FXForms](https://github.com/nicklockwood/FXForms). There is also a post in my [blog-](http://www.thetawelle.de/?p=5086) explaining a bit of the background story.
+Example **iOS Objective-C Project** to explore basic data manipulation in conjunction with a [Realm](https://github.com/realm/realm-cocoa) database and [FXForms](https://github.com/nicklockwood/FXForms). There is also a post in my [blog](http://www.thetawelle.de/?p=5086) explaining a bit of the background story.
 
 ## Features
 This iOS app demonstrates **following features** by creating a sample app which should keep track of captains *(DBCaptain)* which own a yacht *(DBYacht)*:
 
 * Setup a DB model of two entities with a relationship *(DBCaptain, DBYacht)*
-* Have a model change over time & use migrations (demonstrates a history of changes to start with a tiny model which expands frommigration to migration)
+* Have a model change over time & use migrations (demonstrates a history of changes to start with a tiny model which expands from migration to migration)
 * Create/Insert single & bulk entities into Realm DB also on a background thread
 * Edit entities in conjunction with & without FXForms (you can set a flag)
 * Drive the whol database encrypted/unencrypted by switching a PCH-flag
