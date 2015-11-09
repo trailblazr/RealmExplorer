@@ -93,33 +93,10 @@
         self.yachtToEdit.callsign = [self defaultForm].basics.callsign;
         self.yachtToEdit.mmsi = [self defaultForm].basics.mmsi;
         self.yachtToEdit.isActive = [self defaultForm].basics.active;
+        [self.yachtToEdit entityPrepareForSave];
         [[RLMRealm defaultRealm] commitWriteTransaction];
         self.hasPendingChanges = NO;
         [self markSaveButtonAsNeedsSave:NO];
-        if( NO ) {
-        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Data was saved"
-                                                                       message:nil
-                                                                preferredStyle:UIAlertControllerStyleAlert];
-        
-        UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
-                                                              handler:^(UIAlertAction * action) {}];
-        
-        [alert addAction:defaultAction];
-        [self presentViewController:alert animated:YES completion:nil];
-        }
-    }
-    else {
-        if( NO ) {
-        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Data NOT saved!"
-                                                                       message:nil
-                                                                preferredStyle:UIAlertControllerStyleAlert];
-        
-        UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDestructive
-                                                              handler:^(UIAlertAction * action) {}];
-        
-        [alert addAction:defaultAction];
-        [self presentViewController:alert animated:YES completion:nil];
-        }
     }
 #endif
 }

@@ -8,13 +8,31 @@
 
 @class DBCaptain;
 @class DBYacht;
+@class DBAutoGeneric;
 
 RLM_ARRAY_TYPE(DBCaptain)
 RLM_ARRAY_TYPE(DBYacht)
 
+#pragma mark - ENTITY: DBGeneric (PROPERTIES ALL ENTITIES SHOULD HAVE VIA INHERITANCE)
+
+// THIS WILL CREATE AN EMPTY TABLE IN THE DB, BUT IT IS & SHOULD NEVER BE USED
+@interface DBAutoGeneric : RLMObject
+
+// PRIMARY KEY ALL ENTITIES SHOULD IMPLEMENT (EVERY ENTITY NEEDS TO IMPLEMENT ITS OWN)
+@property (nonatomic, retain ) NSString             *PKID;
+
+// PROPERTIES ALL ENTITIES SHOULD HAVE
+@property (nonatomic, retain ) NSDate               *dateCreated;
+@property (nonatomic, retain ) NSDate               *dateChanged;
+
+// METHODS ALL ENTITIES SHOULD SUPPORT
+- (void) entityPrepareForSave;
+
+@end
+
 // YACHT ENTITY (INTRODUCED IN SCHEMA VERSION 3)
 #if kDB_IS_MIN_SCHEMA_3
-@interface DBYacht : RLMObject
+@interface DBYacht : DBAutoGeneric
 @property NSString              *name;
 @property NSString              *callsign;
 @property NSString              *mmsi;
@@ -24,7 +42,7 @@ RLM_ARRAY_TYPE(DBYacht)
 #endif
 
 // CAPTAIN ENTITY (SCHEMA VERSIONS 0 to 4)
-@interface DBCaptain : RLMObject
+@interface DBCaptain : DBAutoGeneric
 #if kDB_IS_MIN_SCHEMA_0
 @property NSString *userid;
 @property NSString *password;

@@ -137,6 +137,7 @@
         addedUser.userid = @"George";
         addedUser.password = @"secretkey";
         addedUser.date = [NSDate date];
+        [addedUser entityPrepareForSave];
 #if kDB_IS_MIN_SCHEMA_1
         addedUser.age = 35;
 #endif
@@ -162,9 +163,18 @@
     DBYacht *yachtCreated = nil;
     if( self.captainToEdit ) {
         [[RLMRealm defaultRealm] beginWriteTransaction];
-        yachtCreated = [DBYacht createInDefaultRealmWithValue:@[@"Nautilus", @"DK1337" ]];
+        yachtCreated = [[DBYacht alloc] init];
+        yachtCreated.name = @"Nautilus";
+        yachtCreated.callsign = @"DK1337";
+        /*
+         // WE DO NOT USE THIS BECAUSE IT IS TOO INFLEXIBLE, AND STARTS COUNTING AT THE PRIMARY KEY
+         // ALSO WE LIKE TO KICK IN THE DEFAULT VALUES FOR PROPERTIES...
+        yachtCreated = [DBYacht createInDefaultRealmWithValue:@[@"valueForProperty1", @"valueForProperty2"]];
+         */
+        [yachtCreated entityPrepareForSave];
         
         [self.captainToEdit.yachts addObject:yachtCreated];
+        [self.captainToEdit entityPrepareForSave];
 
         [[RLMRealm defaultRealm] commitWriteTransaction];
     }
@@ -180,37 +190,31 @@
 
 
 - (IBAction)actionAddItem:(id)sender {
-    BOOL useTransactionBlock = YES;
+    BOOL useTransactionBlock = NO;
     if( useTransactionBlock ) {
         [[RLMRealm defaultRealm] transactionWithBlock:^{
             self.captainToEdit = nil; // important, refresh will be trigered by notification
             self.currentUserIndex = [self.array count];
-#if kDB_IS_SCHEMA_0
-            [DBCaptain createInDefaultRealmWithValue:@[@"Antonius", @"secret0", [NSDate date] ]];
-#endif
-#if kDB_IS_SCHEMA_1
-            [DBCaptain createInDefaultRealmWithValue:@[@"Bernie", @"secret1", [NSDate date], [NSNumber numberWithInt:25]]];
-#endif
-#if kDB_IS_SCHEMA_2
-            [DBCaptain createInDefaultRealmWithValue:@[@"Charlie", @"secret2", [NSDate date], [NSNumber numberWithInt:25], @"male"]];
-#endif
-#if kDB_IS_MIN_SCHEMA_3
-            [DBCaptain createInDefaultRealmWithValue:@[@"Donald", @"secret3", [NSDate date], [NSNumber numberWithInt:17], @"male"]];
-#endif
+            // DO MANIPULATE THE ENTITY HERE
         }];
     }
     else {
         [[RLMRealm defaultRealm] beginWriteTransaction];
         
         DBCaptain *addedUser = [[DBCaptain alloc] init];
-        addedUser.userid = @"Frank";
-        addedUser.password = @"s3cr34";
+        NSArray *userIds = @[@"Antonius",@"Bernie",@"Charlie",@"Donald",@"Frank"];
+        NSArray *userPasswords = @[@"secret0",@"secret1",@"secret2",@"secret3",@"secret4"];
+        NSArray *userAges = @[@0, @25, @28, @17, @45];
+        NSArray *userGenders = @[@"male", @"female", @"male", @"female", @"male"];
+        addedUser.userid = [userIds objectAtIndex:kDB_SCHEMA_VERSION];
+        addedUser.password = [userPasswords objectAtIndex:kDB_SCHEMA_VERSION];
         addedUser.date = [NSDate date];
+        [addedUser entityPrepareForSave];
 #if kDB_IS_MIN_SCHEMA_1
-        addedUser.age = 45;
+        addedUser.age = [[userAges objectAtIndex:kDB_SCHEMA_VERSION] intValue];
 #endif
 #if kDB_IS_MIN_SCHEMA_2
-        addedUser.gender = @"female";
+        addedUser.gender = [userGenders objectAtIndex:kDB_SCHEMA_VERSION];
 #endif
         [[RLMRealm defaultRealm] addObject:addedUser];
         self.captainToEdit = nil; // important, refresh will be trigered by notification
@@ -304,7 +308,7 @@
 }
 
 - (IBAction)actionRefresh:(id)sender {
-    self.array = [[DBCaptain allObjects] sortedResultsUsingProperty:@"date" ascending:YES];
+    self.array = [[DBCaptain allObjects] sortedResultsUsingProperty:@"dateCreated" ascending:YES];
     self.navigationItem.title = [NSString stringWithFormat:@"%i %@", (int)[self.array count], ([self.array count] == 1) ? @"Captain" : @"Captains"];
     if( self.array && [self.array count] > 0 ) {
         if( self.currentUserIndex > [self.array count]-1 ) {
@@ -402,6 +406,7 @@
         self.captainToEdit.userid = [self defaultForm].basics.userid;
         self.captainToEdit.password = [self defaultForm].basics.password;
         self.captainToEdit.date = [self defaultForm].basics.date;
+        [self.captainToEdit entityPrepareForSave];
 #endif
 #if kDB_IS_MIN_SCHEMA_1
         self.captainToEdit.age = [self defaultForm].basics.age;
@@ -416,30 +421,6 @@
         [[RLMRealm defaultRealm] commitWriteTransaction];
         self.hasPendingChanges = NO;
         [self markSaveButtonAsNeedsSave:NO];
-        if( NO ) {
-        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Data was saved"
-                                                                       message:nil
-                                                                preferredStyle:UIAlertControllerStyleAlert];
-        
-        UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
-                                                              handler:^(UIAlertAction * action) {}];
-        
-        [alert addAction:defaultAction];
-        [self presentViewController:alert animated:YES completion:nil];
-        }
-    }
-    else {
-        if( NO ) {
-            UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Data NOT saved!"
-                                                                       message:nil
-                                                                preferredStyle:UIAlertControllerStyleAlert];
-        
-        UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDestructive
-                                                              handler:^(UIAlertAction * action) {}];
-        
-        [alert addAction:defaultAction];
-        [self presentViewController:alert animated:YES completion:nil];
-        }
     }
 }
 
