@@ -1,6 +1,8 @@
 # RealmExplorer
 Example **iOS Objective-C Project** to explore basic data manipulation in conjunction with a [Realm](https://github.com/realm/realm-cocoa) database and [FXForms](https://github.com/nicklockwood/FXForms). There is also a post in my [blog](http://www.thetawelle.de/?p=5086) explaining a bit of the background story.
 
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
+
 ## Features
 This iOS app demonstrates **following features** by creating a sample app which should keep track of captains *(DBCaptain)* which own a yacht *(DBYacht)*:
 
